@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>胸部立位正面 車椅子（X-quang ngực）Hướng dẫn bằng giọng nói tiếng Việt</title>
+<title>胸部立位正面 車椅子（胸部X線）ベトナム語音声ガイド</title>
 <style>
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Segoe UI",sans-serif;
 background:linear-gradient(180deg,#f7fbff,#eef6ff);color:#0f172a;}
@@ -19,7 +19,7 @@ button{font-size:15px;padding:10px 14px;border-radius:12px;border:1px solid #cbd
 button:active{transform:scale(.98);}
 .label{margin-top:14px;font-size:13px;color:#475569;}
 .jp{font-size:18px;font-weight:600;margin-top:6px;}
-.en{font-size:16px;margin-top:4px;}
+.en{font-size:16px;margin-top:4px;line-height:1.7;}
 .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
 audio{width:100%;margin-top:10px;}
 .status{margin-top:8px;font-size:13px;color:#475569;}
@@ -29,8 +29,8 @@ audio{width:100%;margin-top:10px;}
 <body>
 <div class="header">
   <div class="frame-title">
-    <h1>胸部立位正面 車椅子（X-quang ngực）</h1>
-    <p>Hướng dẫn bằng giọng nói tiếng Việt</p>
+    <h1>胸部立位正面 車椅子（胸部X線）</h1>
+    <p>ベトナム語音声ガイド</p>
   </div>
 </div>
 
@@ -46,7 +46,7 @@ audio{width:100%;margin-top:10px;}
   <div class="label">日本語（内容）</div>
   <div class="jp" id="jp"></div>
 
-  <div class="label">Tiếng Việt（kịch bản）</div>
+  <div class="label">ベトナム語（原稿）</div>
   <div class="en" id="en"></div>
 
   <div class="controls">
@@ -65,34 +65,34 @@ audio{width:100%;margin-top:10px;}
 
 <script>
 const STEPS = [
- {preview:"すみません、少しよろしいですか？", jp:"すみません、少しよろしいですか？", en:"Xin lỗi, tôi có thể làm phiền anh/chị một chút được không?"},
- {preview:"こちらをご覧ください。これはあな…", jp:"こちらをご覧ください。これはあなたのお名前と生年月日で合っていますか？", en:"Xin vui lòng nhìn vào đây. Tên và ngày tháng năm sinh này có đúng của anh/chị không?"},
- {preview:"お名前と生年月日を教えていただけ…", jp:"お名前と生年月日を教えていただけますか？", en:"Anh/chị có thể cho tôi biết họ tên và ngày tháng năm sinh được không?"},
- {preview:"簡単な日本語は理解できますか？", jp:"簡単な日本語は理解できますか？", en:"Anh/chị có hiểu tiếng Nhật đơn giản không?"},
- {preview:"中国語の音声ガイドを使用します…", jp:"（通訳不在時）中国語の音声ガイドで検査を説明します。音声の指示に従ってください。", en:"(Khi không có phiên dịch) Chúng tôi sẽ giải thích việc kiểm tra bằng hướng dẫn âm thanh tiếng Việt. Xin vui lòng làm theo hướng dẫn trong âm thanh."},
- {preview:"中国語通訳を呼びますのでお待ち…", jp:"中国語を話せる通訳を呼びますので、しばらくお待ちください。", en:"Chúng tôi sẽ gọi phiên dịch viên nói được tiếng Việt, xin vui lòng chờ một lát."},
+ {preview:"すみません、少しよろしいですか？", jp:"すみません、少しよろしいですか？", en:"Xin lỗi, tôi có thể xin bạn một chút thời gian được không?"},
+ {preview:"こちらをご覧ください。これはあな…", jp:"こちらをご覧ください。これはあなたのお名前と生年月日で合っていますか？", en:"Xin vui lòng xem ở đây. Tên và ngày tháng năm sinh này có đúng của bạn không?"},
+ {preview:"お名前と生年月日を教えていただけ…", jp:"お名前と生年月日を教えていただけますか？", en:"Bạn có thể cho tôi biết họ tên và ngày tháng năm sinh của bạn được không?"},
+ {preview:"簡単な日本語は理解できますか？", jp:"簡単な日本語は理解できますか？", en:"Bạn có thể hiểu tiếng Nhật đơn giản không?"},
+ {preview:"ベトナム語の音声ガイドを使用しま…", jp:"（通訳不在時）ベトナム語の音声ガイドで検査を説明します。音声の指示に従ってください。", en:"Chúng tôi sẽ giải thích buổi chụp bằng hướng dẫn âm thanh tiếng Việt. Xin vui lòng làm theo hướng dẫn phát ra."},
+ {preview:"ベトナム語通訳を呼びますのでお待…", jp:"ベトナム語を話せる通訳を呼びますので、しばらくお待ちください。", en:"Chúng tôi sẽ gọi phiên dịch viên nói tiếng Việt, xin vui lòng đợi một chút."},
  {preview:"どうぞお入りください。", jp:"どうぞお入りください。", en:"Xin mời vào."},
- {preview:"これから胸部レントゲンを撮影しま…", jp:"これから胸部レントゲンを撮影します。", en:"Bây giờ chúng tôi sẽ chụp X-quang ngực cho anh/chị."},
- {preview:"金属やプラスチック、湿布などを外…", jp:"身につけている金属やプラスチック製品、湿布などを外してください。", en:"Xin vui lòng tháo các vật bằng kim loại, đồ nhựa và miếng dán thuốc đang mang trên người."},
- {preview:"更衣室は17番受付の隣にあります…", jp:"（着替えが必要な場合）更衣室は17番受付の隣にあります。検査着は更衣室にありますので、更衣室で着替えてください。着替え終わったらここに戻ってきてください。", en:"(Nếu cần thay đồ) Phòng thay đồ ở bên cạnh quầy tiếp nhận số 17. Quần áo khám ở trong phòng thay đồ, xin vui lòng thay đồ tại đó. Sau khi thay xong, xin quay lại đây."},
- {preview:"車椅子から立つことはできますか…", jp:"車椅子から立つことはできますか？", en:"Anh/chị có thể đứng dậy từ xe lăn không?"},
+ {preview:"これから胸部レントゲンを撮影しま…", jp:"これから胸部レントゲンを撮影します。", en:"Bây giờ chúng tôi sẽ chụp X-quang ngực cho bạn."},
+ {preview:"金属やプラスチック、湿布などを外…", jp:"身につけている金属やプラスチック製品、湿布などを外してください。", en:"Xin vui lòng tháo các vật bằng kim loại, đồ nhựa và miếng dán thuốc mà bạn đang mang trên người."},
+ {preview:"更衣室は17番受付の隣にあります…", jp:"（着替えが必要な場合）更衣室は17番受付の隣にあります。検査着は更衣室にありますので、更衣室で着替えてください。着替え終わったらここに戻ってきてください。", en:"Phòng thay đồ ở bên cạnh quầy tiếp nhận số 17. Quần áo khám có trong phòng thay đồ, nên xin vui lòng vào đó thay đồ. Sau khi thay xong, xin quay lại đây."},
+ {preview:"車椅子から立つことはできますか…", jp:"車椅子から立つことはできますか？", en:"Bạn có thể đứng lên từ xe lăn không?"},
  {preview:"ゆっくり立ってください…", jp:"ゆっくり立ってください。", en:"Xin vui lòng đứng lên từ từ."},
  {preview:"あごをここにのせてください。", jp:"あごをここにのせてください。", en:"Xin vui lòng đặt cằm vào đây."},
- {preview:"あごは乗せなくて大丈夫です…", jp:"あごはここに乗せなくて大丈夫です。上を向くだけで大丈夫です。", en:"Không cần đặt cằm vào đây. Chỉ cần ngẩng đầu lên là được."},
- {preview:"両手で機械を抱えるようにしてくだ…", jp:"両手で機械を抱えるようにしてください。", en:"Xin vui lòng ôm máy bằng cả hai tay."},
- {preview:"両手でこの取手を握ってください…", jp:"両手でこの取手を握ってください。", en:"Xin vui lòng dùng cả hai tay nắm lấy tay cầm này."},
+ {preview:"あごは乗せなくて大丈夫です…", jp:"あごはここに乗せなくて大丈夫です。上を向くだけで大丈夫です。", en:"Bạn không cần đặt cằm vào đây. Chỉ cần ngẩng mặt lên là được."},
+ {preview:"両手で機械を抱えるようにしてくだ…", jp:"両手で機械を抱えるようにしてください。", en:"Xin vui lòng ôm thiết bị này bằng cả hai tay."},
+ {preview:"両手でこの取手を握ってください…", jp:"両手でこの取手を握ってください。", en:"Xin vui lòng nắm tay cầm này bằng cả hai tay."},
  {preview:"動かないでください。", jp:"動かないでください。", en:"Xin đừng cử động."},
- {preview:"大きく息を吸って、止めてください…", jp:"大きく息を吸って、止めてください。", en:"Hít sâu vào, rồi nín thở."},
- {preview:"楽にしてください。", jp:"楽にしてください。", en:"Xin hãy thư giãn."},
- {preview:"検査は終わりました。", jp:"検査は終わりました。", en:"Kiểm tra đã kết thúc."},
- {preview:"ゆっくり座ってください…", jp:"ゆっくり車椅子に座ってください。", en:"Xin vui lòng ngồi lại lên xe lăn từ từ."},
- {preview:"次は診察がありますので、10番へ…", jp:"次は診察がありますので、10番へ行ってこのファイルを提出してください。", en:"Tiếp theo anh/chị sẽ được khám bác sĩ, xin vui lòng đến số 10 và nộp hồ sơ này cho nhân viên."},
+ {preview:"大きく息を吸って、止めてください…", jp:"大きく息を吸って、止めてください。", en:"Xin hít vào thật sâu và nín thở."},
+ {preview:"楽にしてください。", jp:"楽にしてください。", en:"Xin thư giãn."},
+ {preview:"検査は終わりました。", jp:"検査は終わりました。", en:"Việc chụp đã xong."},
+ {preview:"ゆっくり座ってください…", jp:"ゆっくり車椅子に座ってください。", en:"Xin vui lòng ngồi lại vào xe lăn từ từ."},
+ {preview:"次は診察がありますので、10番へ…", jp:"次は診察がありますので、10番へ行ってこのファイルを提出してください。", en:"Tiếp theo bạn sẽ được khám bác sĩ, vui lòng đến số 10 và nộp hồ sơ này cho nhân viên."},
  {preview:"19番または20番の前でお待ちくださ…", jp:"19番または20番の検査室の前でお待ちください。", en:"Xin vui lòng chờ trước phòng khám số 19 hoặc 20."},
  {preview:"23番の前でお待ちください。", jp:"23番の検査室の前でお待ちください。", en:"Xin vui lòng chờ trước phòng khám số 23."},
  {preview:"16番の前でお待ちください。", jp:"16番の検査室の前でお待ちください。", en:"Xin vui lòng chờ trước phòng khám số 16."},
- {preview:"もう着替えてもいいですよ。", jp:"（着替えていい場合）もう着替えてもいいですよ。", en:"(Nếu có thể thay đồ) Bây giờ anh/chị có thể thay đồ được rồi."},
- {preview:"まだ他の検査が残っています。", jp:"（他検査がある場合）まだ他の検査が残っています。", en:"(Nếu còn kiểm tra khác) Vẫn còn các kiểm tra khác nữa."},
- {preview:"まだ着替えないでください。", jp:"（他検査がある場合）まだ着替えないでください。", en:"(Nếu còn kiểm tra khác) Xin đừng thay đồ vội."},
+ {preview:"もう着替えてもいいですよ。", jp:"（着替えていい場合）もう着替えてもいいですよ。", en:"Bây giờ bạn có thể thay lại quần áo được rồi."},
+ {preview:"まだ他の検査が残っています。", jp:"（他検査がある場合）まだ他の検査が残っています。", en:"Bạn vẫn còn những kiểm tra khác."},
+ {preview:"まだ着替えないでください。", jp:"（他検査がある場合）まだ着替えないでください。", en:"Xin đừng thay quần áo vội."},
 ];
 
 const sel=document.getElementById('sel'),

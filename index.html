@@ -3,130 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>胸部立位正面 車椅子（X-quang ngực）Hướng dẫn âm thanh tiếng Việt</title>
+<title>胸部立位正面 車椅子・ベッド｜性別選択画面</title>
 <style>
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Segoe UI",sans-serif;
-background:linear-gradient(180deg,#f7fbff,#eef6ff);color:#0f172a;}
-.header{padding:18px 16px 10px;}
-.frame-title{border:2px solid #38bdf8;padding:14px 16px;border-radius:14px;background:#f8fcff;text-align:center;}
-.frame-title h1{margin:0;font-size:20px;}
-.frame-title p{margin:6px 0 0;font-size:14px;color:#475569;}
-.note{font-size:12px;color:#475569;margin:12px 16px;}
-.main{margin:0 16px 24px;padding:16px;background:#fff;border-radius:18px;box-shadow:0 8px 18px rgba(15,23,42,.08);}
-.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
-select{flex:1;max-width:100%;font-size:16px;padding:10px 36px 10px 12px;border-radius:12px;border:1px solid #cbd5f5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-button{font-size:15px;padding:10px 14px;border-radius:12px;border:1px solid #cbd5f5;background:#eff6ff;}
-button:active{transform:scale(.98);}
-.label{margin-top:14px;font-size:13px;color:#475569;}
-.jp{font-size:18px;font-weight:600;margin-top:6px;}
-.en{font-size:16px;margin-top:4px;line-height:1.7;}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
-audio{width:100%;margin-top:10px;}
-.status{margin-top:8px;font-size:13px;color:#475569;}
-.hint{margin-top:10px;font-size:12px;color:#64748b;}
+:root{
+  --bg1:#f7fbff;
+  --bg2:#eef6ff;
+  --ink:#0f172a;
+  --muted:#475569;
+  --muted2:#64748b;
+  --card:#ffffff;
+  --border:#e2e8f0;
+  --accent1:#93c5fd;
+  --accent2:#38bdf8;
+}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Segoe UI",sans-serif;
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--ink);
+}
+.header{ padding:18px; }
+.header-title{
+  border:2px solid var(--accent2);
+  border-radius:16px;
+  padding:16px 14px;
+  background:#f8fbff;
+}
+.header h1{ margin:0 0 6px; font-size:22px; line-height:1.25; }
+.header .subttl{ font-size:14px; color:var(--muted); }
+.header p{ margin:10px 0 0; font-size:13px; color:var(--muted); }
+.small-note{ font-size:12px; color:var(--muted2); margin-top:6px; }
+.container{ padding:10px 14px 24px; }
+.card{
+  display:flex;
+  align-items:center;
+  padding:16px;
+  margin-bottom:14px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  text-decoration:none;
+  color:var(--ink);
+  box-shadow:0 8px 18px rgba(15,23,42,0.06);
+}
+.num{
+  font-size:18px;
+  font-weight:700;
+  min-width:40px;
+  height:40px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:#ffffff;
+  margin-right:14px;
+}
+.jp{ font-size:16px; font-weight:700; }
+.vi{ font-size:13px; color:var(--muted); margin-top:2px; }
+.card:active{ transform:scale(.98); }
 </style>
 </head>
 <body>
-<div class="header">
-  <div class="frame-title">
-    <h1>胸部立位正面 車椅子（X-quang ngực）</h1>
-    <p>ベトナム語音声ガイド</p>
-  </div>
-</div>
-
-<p class="note">※ iPhone / iPad / Android で再生できます。最初は「再生」を押してください。</p>
-
-<div class="main">
-  <div class="row">
-    <select id="sel"></select>
-    <button id="prev">← 前</button>
-    <button id="next">次 →</button>
+  <div class="header">
+    <div class="header-title">
+      <h1>胸部立位正面 車椅子・ベッド（X-quang ngực）<br><span class="subttl">性別選択画面</span></h1>
+      <p>患者様の性別を選択してください</p>
+      <div class="small-note">※ 各カードをタップすると、該当ページへ移動します。</div>
+    </div>
   </div>
 
-  <div class="label">日本語（内容）</div>
-  <div class="jp" id="jp"></div>
+  <div class="container">
+    <a class="card" href="https://orinndo.github.io/chest-X-ray-PA-erect-wheelchair-VN-male/">
+      <div class="num">M</div>
+      <div class="texts">
+        <div class="jp">男性</div>
+        <div class="vi">nam</div>
+      </div>
+    </a>
 
-  <div class="label">ベトナム語（kịch bản）</div>
-  <div class="en" id="en"></div>
+    <a class="card" href="https://orinndo.github.io/chest-X-ray-PA-erect-wheelchair-VN-female/">
+      <div class="num">F</div>
+      <div class="texts">
+        <div class="jp">女性</div>
+        <div class="vi">nữ</div>
+      </div>
+    </a>
 
-  <div class="controls">
-    <button id="play">▶︎ 再生</button>
-    <button id="pause">⏸ 一時停止</button>
-    <button id="replay">↻ もう一度</button>
   </div>
-
-  <div class="status" id="status">待機中 / Sẵn sàng phát</div>
-  <audio id="player" controls></audio>
-
-  <div class="hint">
-    再生できない場合：消音モード解除、音量、Bluetooth接続を確認してください。
-  </div>
-</div>
-
-<script>
-const STEPS = [
- {preview:"すみません、少しよろしいですか？", jp:"すみません、少しよろしいですか？", en:"Xin lỗi, tôi có thể làm phiền anh/chị một chút được không?"},
- {preview:"こちらをご覧ください。これはあな…", jp:"こちらをご覧ください。これはあなたのお名前と生年月日で合っていますか？", en:"Xin vui lòng xem ở đây. Tên và ngày tháng năm sinh này có đúng là của anh/chị không?"},
- {preview:"お名前と生年月日を教えていただけ…", jp:"お名前と生年月日を教えていただけますか？", en:"Anh/chị có thể cho tôi biết họ tên và ngày tháng năm sinh được không?"},
- {preview:"簡単な日本語は理解できますか？", jp:"簡単な日本語は理解できますか？", en:"Anh/chị có hiểu tiếng Nhật đơn giản không?"},
- {preview:"ベトナム語の音声ガイドを使用しま…", jp:"（通訳不在時）ベトナム語の音声ガイドで検査を説明します。音声の指示に従ってください。", en:"Chúng tôi sẽ giải thích quá trình chụp bằng hướng dẫn âm thanh tiếng Việt. Xin vui lòng làm theo hướng dẫn bằng âm thanh."},
- {preview:"ベトナム語通訳を呼びますのでお待…", jp:"ベトナム語を話せる通訳を呼びますので、しばらくお待ちください。", en:"Chúng tôi sẽ gọi phiên dịch viên nói tiếng Việt, xin vui lòng chờ một chút."},
- {preview:"どうぞお入りください。", jp:"どうぞお入りください。", en:"Xin mời vào."},
- {preview:"これから胸部レントゲンを撮影しま…", jp:"これから胸部レントゲンを撮影します。", en:"Bây giờ chúng tôi sẽ chụp X-quang ngực cho anh/chị."},
- {preview:"金属やプラスチック、湿布などを外…", jp:"身につけている金属やプラスチック製品、湿布などを外してください。", en:"Xin vui lòng tháo các vật bằng kim loại, đồ nhựa và miếng dán thuốc đang mang trên người."},
- {preview:"更衣室は17番受付の隣にあります…", jp:"（着替えが必要な場合）更衣室は17番受付の隣にあります。検査着は更衣室にありますので、更衣室で着替えてください。着替え終わったらここに戻ってきてください。", en:"Phòng thay đồ ở bên cạnh quầy tiếp nhận số 17. Quần áo khám có trong phòng thay đồ, xin vui lòng thay đồ ở đó. Sau khi thay xong, xin quay lại đây."},
- {preview:"車椅子から立つことはできますか…", jp:"車椅子から立つことはできますか？", en:"Anh/chị có thể đứng lên từ xe lăn không?"},
- {preview:"ゆっくり立ってください…", jp:"ゆっくり立ってください。", en:"Xin vui lòng đứng lên từ từ."},
- {preview:"あごをここにのせてください。", jp:"あごをここにのせてください。", en:"Xin vui lòng đặt cằm vào đây."},
- {preview:"あごは乗せなくて大丈夫です…", jp:"あごはここに乗せなくて大丈夫です。上を向くだけで大丈夫です。", en:"Anh/chị không cần đặt cằm vào đây. Chỉ cần ngẩng mặt lên là được."},
- {preview:"両手で機械を抱えるようにしてくだ…", jp:"両手で機械を抱えるようにしてください。", en:"Xin vui lòng ôm thiết bị này bằng cả hai tay."},
- {preview:"両手でこの取手を握ってください…", jp:"両手でこの取手を握ってください。", en:"Xin vui lòng nắm tay cầm này bằng cả hai tay."},
- {preview:"動かないでください。", jp:"動かないでください。", en:"Xin đừng cử động."},
- {preview:"大きく息を吸って、止めてください…", jp:"大きく息を吸って、止めてください。", en:"Xin hít vào thật sâu và nín thở."},
- {preview:"楽にしてください。", jp:"楽にしてください。", en:"Xin thư giãn."},
- {preview:"検査は終わりました。", jp:"検査は終わりました。", en:"Việc chụp đã xong."},
- {preview:"ゆっくり座ってください…", jp:"ゆっくり車椅子に座ってください。", en:"Xin vui lòng ngồi lại vào xe lăn từ từ."},
- {preview:"次は診察がありますので、10番へ…", jp:"次は診察がありますので、10番へ行ってこのファイルを提出してください。", en:"Tiếp theo bạn sẽ được khám bác sĩ. Xin vui lòng đến số 10 và nộp hồ sơ này cho nhân viên."},
- {preview:"19番または20番の前でお待ちくださ…", jp:"19番または20番の検査室の前でお待ちください。", en:"Xin vui lòng chờ trước phòng khám số 19 hoặc 20."},
- {preview:"23番の前でお待ちください。", jp:"23番の検査室の前でお待ちください。", en:"Xin vui lòng chờ trước phòng khám số 23."},
- {preview:"16番の前でお待ちください。", jp:"16番の前でお待ちください。", en:"Xin vui lòng chờ trước phòng khám số 16."},
- {preview:"もう着替えてもいいですよ。", jp:"（着替えていい場合）もう着替えてもいいですよ。", en:"Bây giờ anh/chị có thể thay lại quần áo được rồi."},
- {preview:"まだ他の検査が残っています。", jp:"（他検査がある場合）まだ他の検査が残っています。", en:"Anh/chị vẫn còn các kiểm tra khác."},
- {preview:"まだ着替えないでください。", jp:"（他検査がある場合）まだ着替えないでください。", en:"Xin đừng thay quần áo vội."},
-];
-
-const sel=document.getElementById('sel'),
-jp=document.getElementById('jp'),
-en=document.getElementById('en'),
-player=document.getElementById('player'),
-status=document.getElementById('status');
-
-STEPS.forEach((s,i)=>{
- const o=document.createElement('option');
- o.value=i;
- o.textContent=`${String(i+1).padStart(2,'0')}｜${s.jp}`;
- sel.appendChild(o);
-});
-
-let idx=0;
-function load(i){
- idx=Math.max(0,Math.min(STEPS.length-1,i));
- sel.value=idx;
- jp.textContent=STEPS[idx].jp;
- en.textContent=STEPS[idx].en;
- player.src=`audio/step_${String(idx+1).padStart(2,'0')}.m4a`;
- status.textContent="待機中 / Sẵn sàng phát";
-}
-sel.onchange=()=>load(parseInt(sel.value));
-document.getElementById('prev').onclick=()=>load(idx-1);
-document.getElementById('next').onclick=()=>load(idx+1);
-document.getElementById('play').onclick=()=>player.play();
-document.getElementById('pause').onclick=()=>player.pause();
-document.getElementById('replay').onclick=()=>{player.currentTime=0;player.play();}
-player.onplay=()=>status.textContent="再生中 / Đang phát";
-player.onpause=()=>status.textContent="一時停止 / Đã tạm dừng";
-player.onended=()=>status.textContent="待機中 / Sẵn sàng phát";
-load(0);
-</script>
 </body>
 </html>
